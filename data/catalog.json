@@ -1,0 +1,1259 @@
+{
+  "schema_version": 1,
+  "source": "表情&动作/展示.html",
+  "source_sha256": "6ddffcb9d7579ca281acb26d45d8fb3e649e1bbcfebd4faee7543c866c15e958",
+  "angle_convention": "robot-self; positive: pitch down, roll left, yaw left, arm forward/outward",
+  "actions": [
+    {
+      "id": "A01",
+      "name": "平静",
+      "screen_id": "F01",
+      "description": "轻转微抬头，保持后回中；双臂保持下垂。",
+      "adaptation": "将水平转向与微抬头合并为一个目标姿态；保留原共同停留。",
+      "stages": [
+        {
+          "name": "轻转微抬头",
+          "targets": {
+            "head_yaw": 4,
+            "head_pitch_down": -2,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 650,
+          "rationale": "沿用左转 4°、仰头 2°；650 ms 来自原两轴共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 0
+    },
+    {
+      "id": "A02",
+      "name": "喜悦",
+      "screen_id": "F02",
+      "description": "双臂欢展并仰头，保持后回中。",
+      "adaptation": "保留双臂前抬 65°、外张 25°及仰头 8°；删去随后仰头 3°、6°的小幅二次起伏，减少独立目标下发。",
+      "stages": [
+        {
+          "name": "双臂欢展并仰头",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": -8,
+            "head_roll": 0,
+            "arm_l_forward": 65,
+            "arm_l_out": 25,
+            "arm_r_forward": 65,
+            "arm_r_out": 25
+          },
+          "hold_after_arrival_ms": 1150,
+          "rationale": "沿用双臂欢展目标；1150 ms 取原双臂共同保持区间，仰头改为在此期间稳定保持，属待标定的节奏适配。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 1
+    },
+    {
+      "id": "A03",
+      "name": "入迷",
+      "screen_id": "F03",
+      "description": "双臂半抬，仰头并轻侧倾，停留后回中。",
+      "adaptation": "合并头部与双臂的轻微到位先后差异；保留半抬与较长停留的主体姿态。",
+      "stages": [
+        {
+          "name": "半抬凝视",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": -10,
+            "head_roll": 3,
+            "arm_l_forward": 35,
+            "arm_l_out": 12,
+            "arm_r_forward": 35,
+            "arm_r_out": 12
+          },
+          "hold_after_arrival_ms": 1000,
+          "rationale": "沿用双臂前抬 35°、外张 12°、仰头 10°、左侧倾 3°；1000 ms 来自全部活动轴共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 2
+    },
+    {
+      "id": "A04",
+      "name": "深思",
+      "screen_id": "F04",
+      "description": "左臂抬至面侧，头部左转侧倾并略低头，保持后回中。",
+      "adaptation": "将面侧单臂与头部姿态合并为一组目标；不再保留各轴小幅错开的到位时序。",
+      "stages": [
+        {
+          "name": "面侧思考姿态",
+          "targets": {
+            "head_yaw": 12,
+            "head_pitch_down": 3,
+            "head_roll": 7,
+            "arm_l_forward": 58,
+            "arm_l_out": 17,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 1100,
+          "rationale": "沿用左臂前抬 58°、外张 17°、左转 12°、低头 3°、左侧倾 7°；1100 ms 来自各轴共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 3
+    },
+    {
+      "id": "A05",
+      "name": "难过",
+      "screen_id": "F05",
+      "description": "低头并轻侧倾，双臂小幅向后，停留后回中。",
+      "adaptation": "保留原单一失落姿态及停留，去除首尾演示留白。",
+      "stages": [
+        {
+          "name": "低垂后落",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 8,
+            "head_roll": -4,
+            "arm_l_forward": -8,
+            "arm_l_out": 0,
+            "arm_r_forward": -8,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 900,
+          "rationale": "沿用低头 8°、右侧倾 4°、双臂向后 8°；900 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 4
+    },
+    {
+      "id": "A06",
+      "name": "悲痛",
+      "screen_id": "F06",
+      "description": "深低头侧倾，左臂抬至颊侧、右臂向后，明显停留后回中。",
+      "adaptation": "保留左右臂不对称及深低头特征；合并各轴到位先后差异，以共同保持区间作为停留。",
+      "stages": [
+        {
+          "name": "颊侧低头姿态",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 11,
+            "head_roll": -6,
+            "arm_l_forward": 65,
+            "arm_l_out": 18,
+            "arm_r_forward": -6,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 1000,
+          "rationale": "沿用低头 11°、右侧倾 6°、左臂前抬 65°并外张 18°、右臂向后 6°；1000 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 5
+    },
+    {
+      "id": "A07",
+      "name": "接受",
+      "screen_id": "F07",
+      "description": "点头一次后回中；双臂保持下垂。",
+      "adaptation": "保留一次明确点头；回中到位即结束，不重复发送后续静止中位。",
+      "stages": [
+        {
+          "name": "点头确认",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 8,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 450,
+          "rationale": "沿用低头 8°；450 ms 来自原低头目标的保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 6
+    },
+    {
+      "id": "A08",
+      "name": "信任",
+      "screen_id": "F08",
+      "description": "双臂低位外展并轻仰头，保持后回中。",
+      "adaptation": "保留低位开放姿态与共同停留。",
+      "stages": [
+        {
+          "name": "低位开放姿态",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": -4,
+            "head_roll": 0,
+            "arm_l_forward": 20,
+            "arm_l_out": 26,
+            "arm_r_forward": 20,
+            "arm_r_out": 26
+          },
+          "hold_after_arrival_ms": 850,
+          "rationale": "沿用双臂前抬 20°、外张 26°、仰头 4°；850 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 7
+    },
+    {
+      "id": "A09",
+      "name": "敬佩",
+      "screen_id": "F09",
+      "description": "双臂高位展开并明显仰头，保持后回中。",
+      "adaptation": "保留敬佩的高位展开姿态与原停留；动作名“敬佩”继续对应屏幕 F09“钦佩”。",
+      "stages": [
+        {
+          "name": "高位敬佩姿态",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": -15,
+            "head_roll": 0,
+            "arm_l_forward": 78,
+            "arm_l_out": 28,
+            "arm_r_forward": 78,
+            "arm_r_out": 28
+          },
+          "hold_after_arrival_ms": 1150,
+          "rationale": "沿用双臂前抬 78°、外张 28°、仰头 15°；1150 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 8
+    },
+    {
+      "id": "A10",
+      "name": "无趣",
+      "screen_id": "F10",
+      "description": "头部右转、低垂并左侧倾，保持后回中；双臂下垂。",
+      "adaptation": "保留原单一转头侧歪姿态及停留。",
+      "stages": [
+        {
+          "name": "侧转低垂",
+          "targets": {
+            "head_yaw": -20,
+            "head_pitch_down": 7,
+            "head_roll": 8,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 900,
+          "rationale": "沿用右转 20°、低头 7°、左侧倾 8°；900 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 9
+    },
+    {
+      "id": "A11",
+      "name": "厌恶",
+      "screen_id": "F11",
+      "description": "右臂向外挡开，头部左转回避并略低头，保持后回中。",
+      "adaptation": "将右臂挡开与头部回避合并为一组目标；保留非对称特征。",
+      "stages": [
+        {
+          "name": "挡开并回避",
+          "targets": {
+            "head_yaw": 28,
+            "head_pitch_down": 3,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 58,
+            "arm_r_out": 32
+          },
+          "hold_after_arrival_ms": 1250,
+          "rationale": "沿用右臂前抬 58°、外张 32°、左转 28°、低头 3°；1250 ms 来自原各轴共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 10
+    },
+    {
+      "id": "A12",
+      "name": "嫌弃",
+      "screen_id": "F12",
+      "description": "头部右转、仰头并右侧倾，左臂低位摊开，保持后回中。",
+      "adaptation": "保留原单侧低位摊臂及转头姿态。",
+      "stages": [
+        {
+          "name": "偏头摊臂",
+          "targets": {
+            "head_yaw": -25,
+            "head_pitch_down": -5,
+            "head_roll": -4,
+            "arm_l_forward": 25,
+            "arm_l_out": 30,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 1150,
+          "rationale": "沿用右转 25°、仰头 5°、右侧倾 4°、左臂前抬 25°并外张 30°；1150 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 11
+    },
+    {
+      "id": "A13",
+      "name": "紧张",
+      "screen_id": "F13",
+      "description": "双臂半抬并略低头，先向左小幅察看，再朝正前方保持，最后回中。",
+      "adaptation": "保留“先侧看、再守住正前方”的必要目标切换；双臂与俯仰在前两阶段保持同一目标。",
+      "stages": [
+        {
+          "name": "半抬并侧看",
+          "targets": {
+            "head_yaw": 8,
+            "head_pitch_down": 4,
+            "head_roll": 0,
+            "arm_l_forward": 38,
+            "arm_l_out": 9,
+            "arm_r_forward": 38,
+            "arm_r_out": 9
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用双臂前抬 38°、外张 9°、低头 4°、左转 8°；原侧看端点无静止平台，因此到位后不追加停留。"
+        },
+        {
+          "name": "守住正前方",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 4,
+            "head_roll": 0,
+            "arm_l_forward": 38,
+            "arm_l_out": 9,
+            "arm_r_forward": 38,
+            "arm_r_out": 9
+          },
+          "hold_after_arrival_ms": 450,
+          "rationale": "仅把水平转向目标改为中位；450 ms 来自原头部回正后、双臂收回前的共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 12
+    },
+    {
+      "id": "A14",
+      "name": "害怕",
+      "screen_id": "F14",
+      "description": "双臂抬高护在面侧，仰头并轻侧倾，保持后回中。",
+      "adaptation": "合并手臂与头部的轻微到位先后差异；保留护面姿态及共同停留。",
+      "stages": [
+        {
+          "name": "抬臂护面",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": -9,
+            "head_roll": -4,
+            "arm_l_forward": 72,
+            "arm_l_out": 17,
+            "arm_r_forward": 72,
+            "arm_r_out": 17
+          },
+          "hold_after_arrival_ms": 1300,
+          "rationale": "沿用双臂前抬 72°、外张 17°、仰头 9°、右侧倾 4°；1300 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 13
+    },
+    {
+      "id": "A15",
+      "name": "恐慌",
+      "screen_id": "F15",
+      "description": "双臂高举外张并仰头，头部先左看再右看，随后回中收势。",
+      "adaptation": "保留左右两次察看的方向端点，不拆分转向路径；将头部回正与双臂收回合并为最后一阶段。目标点本身不承诺原设计的快速节奏。",
+      "stages": [
+        {
+          "name": "高举并向左察看",
+          "targets": {
+            "head_yaw": 17,
+            "head_pitch_down": -12,
+            "head_roll": 0,
+            "arm_l_forward": 88,
+            "arm_l_out": 30,
+            "arm_r_forward": 88,
+            "arm_r_out": 30
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用双臂前抬 88°、外张 30°、仰头 12°及左转 17°；原左侧端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "保持高举并向右察看",
+          "targets": {
+            "head_yaw": -17,
+            "head_pitch_down": -12,
+            "head_roll": 0,
+            "arm_l_forward": 88,
+            "arm_l_out": 30,
+            "arm_r_forward": 88,
+            "arm_r_out": 30
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "保持双臂与仰头目标，只将水平转向改为右转 17°；原右侧端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 14
+    },
+    {
+      "id": "A16",
+      "name": "烦忧",
+      "screen_id": "F16",
+      "description": "左臂在身前半抬并低头，头部先右看再左看，随后回中。",
+      "adaptation": "保留左右迟疑的两个方向目标；合并头部回正与左臂收回，不拆分两侧之间的运动路径。",
+      "stages": [
+        {
+          "name": "半抬并向右迟疑",
+          "targets": {
+            "head_yaw": -12,
+            "head_pitch_down": 5,
+            "head_roll": 0,
+            "arm_l_forward": 45,
+            "arm_l_out": 20,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用左臂前抬 45°、外张 20°、低头 5°、右转 12°；原右侧端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "保持半抬并向左迟疑",
+          "targets": {
+            "head_yaw": 12,
+            "head_pitch_down": 5,
+            "head_roll": 0,
+            "arm_l_forward": 45,
+            "arm_l_out": 20,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "保持左臂与低头目标，只把水平转向改为左转 12°；原左侧端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 15
+    },
+    {
+      "id": "A17",
+      "name": "生气",
+      "screen_id": "F17",
+      "description": "双臂中位外张并略低头，保持正面姿态后回中。",
+      "adaptation": "保留原稳定正面姿态及较长停留。",
+      "stages": [
+        {
+          "name": "正面外张姿态",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 6,
+            "head_roll": 0,
+            "arm_l_forward": 45,
+            "arm_l_out": 25,
+            "arm_r_forward": 45,
+            "arm_r_out": 25
+          },
+          "hold_after_arrival_ms": 1500,
+          "rationale": "沿用双臂前抬 45°、外张 25°及低头 6°；1500 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 16
+    },
+    {
+      "id": "A18",
+      "name": "暴躁",
+      "screen_id": "F18",
+      "description": "双臂保持外张，左右臂按左高、右高、左高、右高交替；头部右转、左转后回正，最后整体回中。",
+      "adaptation": "保留原四次左右臂高低交替及头部两侧短转；将独立的头部端点与邻近手臂目标合并，第三阶段保持左转而不添加额外转向。原收势前左右臂 50°/65° 目标保留。",
+      "stages": [
+        {
+          "name": "第一拍左臂高抬",
+          "targets": {
+            "head_yaw": -8,
+            "head_pitch_down": 4,
+            "head_roll": 0,
+            "arm_l_forward": 70,
+            "arm_l_out": 25,
+            "arm_r_forward": 45,
+            "arm_r_out": 25
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用左臂前抬 70°、右臂 45°、双臂外张 25°、低头 4°；合并原邻近的右转 8° 端点。原交替端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "第二拍右臂高抬",
+          "targets": {
+            "head_yaw": 8,
+            "head_pitch_down": 4,
+            "head_roll": 0,
+            "arm_l_forward": 45,
+            "arm_l_out": 25,
+            "arm_r_forward": 70,
+            "arm_r_out": 25
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用左臂前抬 45°、右臂 70°；头部改为左转 8°，其余目标保持。原交替端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "第三拍左臂再抬",
+          "targets": {
+            "head_yaw": 8,
+            "head_pitch_down": 4,
+            "head_roll": 0,
+            "arm_l_forward": 70,
+            "arm_l_out": 25,
+            "arm_r_forward": 45,
+            "arm_r_out": 25
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用左臂前抬 70°、右臂 45°；保持第二阶段头部方向，避免增加无必要的中间转向目标。原交替端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "第四拍右臂再抬并回正",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 4,
+            "head_roll": 0,
+            "arm_l_forward": 50,
+            "arm_l_out": 25,
+            "arm_r_forward": 65,
+            "arm_r_out": 25
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用收势前左臂前抬 50°、右臂 65°，头部水平回中，保持低头及外张目标。原端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 17
+    },
+    {
+      "id": "A19",
+      "name": "感兴趣",
+      "screen_id": "F19",
+      "description": "头部向左转并轻仰侧倾，右臂低位邀请，保持后回中。",
+      "adaptation": "保留原示意朝向与单臂邀请姿态；头部与右臂到位差异合并。该固定角度仍为动作演示目标，不替代真实目标跟随。",
+      "stages": [
+        {
+          "name": "侧向关注并邀请",
+          "targets": {
+            "head_yaw": 18,
+            "head_pitch_down": -4,
+            "head_roll": 7,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 30,
+            "arm_r_out": 16
+          },
+          "hold_after_arrival_ms": 1100,
+          "rationale": "沿用左转 18°、仰头 4°、左侧倾 7°、右臂前抬 30°并外张 16°；1100 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 18
+    },
+    {
+      "id": "A20",
+      "name": "盼望",
+      "screen_id": "F20",
+      "description": "双臂抬至等待位置并仰头，保持后回中。",
+      "adaptation": "保留原等待姿态与较长停留，不新增催促重复。",
+      "stages": [
+        {
+          "name": "抬臂期待",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": -9,
+            "head_roll": 0,
+            "arm_l_forward": 48,
+            "arm_l_out": 24,
+            "arm_r_forward": 48,
+            "arm_r_out": 24
+          },
+          "hold_after_arrival_ms": 1050,
+          "rationale": "沿用双臂前抬 48°、外张 24°、仰头 9°；1050 ms 来自原共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 19
+    },
+    {
+      "id": "A21",
+      "name": "警惕",
+      "screen_id": "F21",
+      "description": "双臂低位略张并轻仰头，头部先左巡视再右巡视，停留后回中。",
+      "adaptation": "保留左转 30°与右转 25°两侧检查；右侧停留按原全姿态共同保持区间取值，头部多出的 100 ms 单轴尾留并入收势。",
+      "stages": [
+        {
+          "name": "低位展开并向左巡视",
+          "targets": {
+            "head_yaw": 30,
+            "head_pitch_down": -3,
+            "head_roll": 0,
+            "arm_l_forward": 10,
+            "arm_l_out": 12,
+            "arm_r_forward": 10,
+            "arm_r_out": 12
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "沿用双臂前抬 10°、外张 12°、仰头 3°、左转 30°；原左侧端点无静止平台，到位后不追加停留。"
+        },
+        {
+          "name": "向右巡视并保持",
+          "targets": {
+            "head_yaw": -25,
+            "head_pitch_down": -3,
+            "head_roll": 0,
+            "arm_l_forward": 10,
+            "arm_l_out": 12,
+            "arm_r_forward": 10,
+            "arm_r_out": 12
+          },
+          "hold_after_arrival_ms": 450,
+          "rationale": "保持双臂与仰头目标，只把水平转向改为右转 25°；450 ms 来自原右侧全姿态共同保持区间。"
+        },
+        {
+          "name": "回中收势",
+          "targets": {
+            "head_yaw": 0,
+            "head_pitch_down": 0,
+            "head_roll": 0,
+            "arm_l_forward": 0,
+            "arm_l_out": 0,
+            "arm_r_forward": 0,
+            "arm_r_out": 0
+          },
+          "hold_after_arrival_ms": 0,
+          "rationale": "七轴回到已定义的中位；确认全部目标轴到位后结束，不另加演示尾部的静止留白。"
+        }
+      ],
+      "protocol_id": 20
+    }
+  ],
+  "expressions": [
+    {
+      "id": "F01",
+      "name": "平静",
+      "family": "正向",
+      "description": "略收的圆角眼，低频呼吸与一次慢眨眼；比默认待机更放松。",
+      "full": "/media/F01_%E5%B9%B3%E9%9D%99_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F01_%E5%B9%B3%E9%9D%99_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A01"
+    },
+    {
+      "id": "F02",
+      "name": "喜悦",
+      "family": "正向",
+      "description": "双眼上弯成拱，轻快上提两次；保持开心而非完成确认。",
+      "full": "/media/F02_%E5%96%9C%E6%82%A6_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F02_%E5%96%9C%E6%82%A6_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A02"
+    },
+    {
+      "id": "F03",
+      "name": "痴迷",
+      "family": "正向",
+      "description": "圆润心形眼向内聚焦，缓慢双次膨胀，表达强烈投入。",
+      "full": "/media/F03_%E7%97%B4%E8%BF%B7_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F03_%E7%97%B4%E8%BF%B7_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A03"
+    },
+    {
+      "id": "F04",
+      "name": "深思",
+      "family": "思考与兴趣",
+      "description": "左眼保持张开，右眼半睑；向右上查找后停顿。",
+      "full": "/media/F04_%E6%B7%B1%E6%80%9D_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F04_%E6%B7%B1%E6%80%9D_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A04"
+    },
+    {
+      "id": "F05",
+      "name": "难过",
+      "family": "低落",
+      "description": "内侧眼角上扬、外侧下垂，整体缓慢下沉；睁眼且不落泪。",
+      "full": "/media/F05_%E9%9A%BE%E8%BF%87_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F05_%E9%9A%BE%E8%BF%87_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A05"
+    },
+    {
+      "id": "F06",
+      "name": "悲痛",
+      "family": "低落",
+      "description": "闭合下弯眼配两滴青蓝泪滴，轻微抽动；比难过更强。",
+      "full": "/media/F06_%E6%82%B2%E7%97%9B_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F06_%E6%82%B2%E7%97%9B_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A06"
+    },
+    {
+      "id": "F07",
+      "name": "接受",
+      "family": "正向",
+      "description": "眼形短暂压低再恢复，单次明确下点；双眼始终对称。",
+      "full": "/media/F07_%E6%8E%A5%E5%8F%97_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F07_%E6%8E%A5%E5%8F%97_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A07"
+    },
+    {
+      "id": "F08",
+      "name": "信任",
+      "family": "正向",
+      "description": "低而舒展的柔和眼形，缓慢闭眼后自然张开；无弹跳。",
+      "full": "/media/F08_%E4%BF%A1%E4%BB%BB_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F08_%E4%BF%A1%E4%BB%BB_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A08"
+    },
+    {
+      "id": "F09",
+      "name": "钦佩",
+      "family": "正向",
+      "description": "圆角四芒眼向上提起，短暂放大后稳住；区别于心形痴迷。",
+      "full": "/media/F09_%E9%92%A6%E4%BD%A9_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F09_%E9%92%A6%E4%BD%A9_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A09"
+    },
+    {
+      "id": "F10",
+      "name": "无趣",
+      "family": "低落",
+      "description": "双眼压成低平半睑，缓慢偏向一侧后停住。",
+      "full": "/media/F10_%E6%97%A0%E8%B6%A3_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F10_%E6%97%A0%E8%B6%A3_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A10"
+    },
+    {
+      "id": "F11",
+      "name": "厌恶",
+      "family": "排斥",
+      "description": "双眼内角下压，明显收窄并同步后缩；两眼对称。",
+      "full": "/media/F11_%E5%8E%8C%E6%81%B6_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F11_%E5%8E%8C%E6%81%B6_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A11"
+    },
+    {
+      "id": "F12",
+      "name": "嫌弃",
+      "family": "排斥",
+      "description": "一高一低半睑与侧目，右眼更窄；区别于对称厌恶。",
+      "full": "/media/F12_%E5%AB%8C%E5%BC%83_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F12_%E5%AB%8C%E5%BC%83_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A12"
+    },
+    {
+      "id": "F13",
+      "name": "紧张",
+      "family": "不安",
+      "description": "中等睁大，短促左右扫视，双次快眨眼；轮廓保持完整。",
+      "full": "/media/F13_%E7%B4%A7%E5%BC%A0_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F13_%E7%B4%A7%E5%BC%A0_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A13"
+    },
+    {
+      "id": "F14",
+      "name": "害怕",
+      "family": "不安",
+      "description": "双眼高而窄、向内收拢，细微颤动；区别于紧张的扫视。",
+      "full": "/media/F14_%E5%AE%B3%E6%80%95_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F14_%E5%AE%B3%E6%80%95_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A14"
+    },
+    {
+      "id": "F15",
+      "name": "恐慌",
+      "family": "不安",
+      "description": "更大更高的眼形，短促收缩与更明显的左右急动；不闪屏。",
+      "full": "/media/F15_%E6%81%90%E6%85%8C_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F15_%E6%81%90%E6%85%8C_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A15"
+    },
+    {
+      "id": "F16",
+      "name": "烦忧",
+      "family": "不安",
+      "description": "内角抬起且一侧更低，缓慢左右犹疑；忧虑而非攻击。",
+      "full": "/media/F16_%E7%83%A6%E5%BF%A7_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F16_%E7%83%A6%E5%BF%A7_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A16"
+    },
+    {
+      "id": "F17",
+      "name": "生气",
+      "family": "愤怒",
+      "description": "两眼内角明显下压、厚度充足，短促向中间挤压后凝视。",
+      "full": "/media/F17_%E7%94%9F%E6%B0%94_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F17_%E7%94%9F%E6%B0%94_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A17"
+    },
+    {
+      "id": "F18",
+      "name": "暴躁",
+      "family": "愤怒",
+      "description": "内角压得更低、眼缝更窄，三次紧绷脉冲与短促抖动。",
+      "full": "/media/F18_%E6%9A%B4%E8%BA%81_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F18_%E6%9A%B4%E8%BA%81_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A18"
+    },
+    {
+      "id": "F19",
+      "name": "感兴趣",
+      "family": "思考与兴趣",
+      "description": "一眼略大并上提，双眼跟随向上靠近；清醒探究。",
+      "full": "/media/F19_%E6%84%9F%E5%85%B4%E8%B6%A3_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F19_%E6%84%9F%E5%85%B4%E8%B6%A3_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A19"
+    },
+    {
+      "id": "F20",
+      "name": "盼望",
+      "family": "正向",
+      "description": "双眼同时拉高、上移，两次有节制的轻跳；保持圆角眼。",
+      "full": "/media/F20_%E7%9B%BC%E6%9C%9B_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F20_%E7%9B%BC%E6%9C%9B_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A20"
+    },
+    {
+      "id": "F21",
+      "name": "警惕",
+      "family": "思考与兴趣",
+      "description": "中窄斜睑保持锐利，左右各一次定向扫描后回中。",
+      "full": "/media/F21_%E8%AD%A6%E6%83%95_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/F21_%E8%AD%A6%E6%83%95_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": "A21"
+    },
+    {
+      "id": "D01",
+      "name": "默认待机",
+      "family": "默认",
+      "description": "标准双圆角眼，单次自然眨眼与轻微呼吸，视觉中性。",
+      "full": "/media/D01_%E9%BB%98%E8%AE%A4%E5%BE%85%E6%9C%BA_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/D01_%E9%BB%98%E8%AE%A4%E5%BE%85%E6%9C%BA_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": null
+    },
+    {
+      "id": "D02",
+      "name": "默认唤醒",
+      "family": "默认",
+      "description": "双眼由低睑醒来、抬高、一次短眨眼；保持专注。",
+      "full": "/media/D02_%E9%BB%98%E8%AE%A4%E5%94%A4%E9%86%92_%E5%AE%8C%E6%95%B4.mp4",
+      "loop": "/media/D02_%E9%BB%98%E8%AE%A4%E5%94%A4%E9%86%92_%E5%BE%AA%E7%8E%AF.mp4",
+      "action_id": null
+    }
+  ],
+  "states": [
+    {
+      "id": "R00",
+      "name": "准备记录",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R00_%E5%87%86%E5%A4%87%E8%AE%B0%E5%BD%95.mp4",
+      "loop": "/media/R00_%E5%87%86%E5%A4%87%E8%AE%B0%E5%BD%95.mp4",
+      "action_id": null
+    },
+    {
+      "id": "R01",
+      "name": "记录 · 等待发言",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R01_%E8%AE%B0%E5%BD%95_%E7%AD%89%E5%BE%85%E5%8F%91%E8%A8%80.mp4",
+      "loop": "/media/R01_%E8%AE%B0%E5%BD%95_%E7%AD%89%E5%BE%85%E5%8F%91%E8%A8%80.mp4",
+      "action_id": null
+    },
+    {
+      "id": "R02",
+      "name": "记录 · 正在采音",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R02_%E8%AE%B0%E5%BD%95_%E6%AD%A3%E5%9C%A8%E9%87%87%E9%9F%B3.mp4",
+      "loop": "/media/R02_%E8%AE%B0%E5%BD%95_%E6%AD%A3%E5%9C%A8%E9%87%87%E9%9F%B3.mp4",
+      "action_id": null
+    },
+    {
+      "id": "R03",
+      "name": "记录 · 机器人播报",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R03_%E8%AE%B0%E5%BD%95_%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%92%AD%E6%8A%A5.mp4",
+      "loop": "/media/R03_%E8%AE%B0%E5%BD%95_%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%92%AD%E6%8A%A5.mp4",
+      "action_id": null
+    },
+    {
+      "id": "R04",
+      "name": "记录中断",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R04_%E8%AE%B0%E5%BD%95%E4%B8%AD%E6%96%AD.mp4",
+      "loop": "/media/R04_%E8%AE%B0%E5%BD%95%E4%B8%AD%E6%96%AD.mp4",
+      "action_id": null
+    },
+    {
+      "id": "R05",
+      "name": "等待确认",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R05_%E7%AD%89%E5%BE%85%E7%A1%AE%E8%AE%A4.mp4",
+      "loop": "/media/R05_%E7%AD%89%E5%BE%85%E7%A1%AE%E8%AE%A4.mp4",
+      "action_id": null
+    },
+    {
+      "id": "R06",
+      "name": "任务受阻",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R06_%E4%BB%BB%E5%8A%A1%E5%8F%97%E9%98%BB.mp4",
+      "loop": "/media/R06_%E4%BB%BB%E5%8A%A1%E5%8F%97%E9%98%BB.mp4",
+      "action_id": null
+    },
+    {
+      "id": "R07",
+      "name": "状态核查中",
+      "family": "会议记录",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/R07_%E7%8A%B6%E6%80%81%E6%A0%B8%E6%9F%A5%E4%B8%AD.mp4",
+      "loop": "/media/R07_%E7%8A%B6%E6%80%81%E6%A0%B8%E6%9F%A5%E4%B8%AD.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T01",
+      "name": "听取中文",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T01_%E5%90%AC%E5%8F%96%E4%B8%AD%E6%96%87.mp4",
+      "loop": "/media/T01_%E5%90%AC%E5%8F%96%E4%B8%AD%E6%96%87.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T02",
+      "name": "译文准备中 · 中 → 英",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T02_%E8%AF%91%E6%96%87%E5%87%86%E5%A4%87%E4%B8%AD_%E4%B8%AD%E8%AF%91%E8%8B%B1.mp4",
+      "loop": "/media/T02_%E8%AF%91%E6%96%87%E5%87%86%E5%A4%87%E4%B8%AD_%E4%B8%AD%E8%AF%91%E8%8B%B1.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T03",
+      "name": "播报英文",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T03_%E6%92%AD%E6%8A%A5%E8%8B%B1%E6%96%87.mp4",
+      "loop": "/media/T03_%E6%92%AD%E6%8A%A5%E8%8B%B1%E6%96%87.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T04",
+      "name": "等待英文",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T04_%E7%AD%89%E5%BE%85%E8%8B%B1%E6%96%87.mp4",
+      "loop": "/media/T04_%E7%AD%89%E5%BE%85%E8%8B%B1%E6%96%87.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T05",
+      "name": "听取英文",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T05_%E5%90%AC%E5%8F%96%E8%8B%B1%E6%96%87.mp4",
+      "loop": "/media/T05_%E5%90%AC%E5%8F%96%E8%8B%B1%E6%96%87.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T06",
+      "name": "译文准备中 · 英 → 中",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T06_%E8%AF%91%E6%96%87%E5%87%86%E5%A4%87%E4%B8%AD_%E8%8B%B1%E8%AF%91%E4%B8%AD.mp4",
+      "loop": "/media/T06_%E8%AF%91%E6%96%87%E5%87%86%E5%A4%87%E4%B8%AD_%E8%8B%B1%E8%AF%91%E4%B8%AD.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T07",
+      "name": "播报中文",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T07_%E6%92%AD%E6%8A%A5%E4%B8%AD%E6%96%87.mp4",
+      "loop": "/media/T07_%E6%92%AD%E6%8A%A5%E4%B8%AD%E6%96%87.mp4",
+      "action_id": null
+    },
+    {
+      "id": "T08",
+      "name": "等待中文",
+      "family": "双向翻译",
+      "description": "记录为纯声波；翻译显示中／英方向。",
+      "full": "/media/T08_%E7%AD%89%E5%BE%85%E4%B8%AD%E6%96%87.mp4",
+      "loop": "/media/T08_%E7%AD%89%E5%BE%85%E4%B8%AD%E6%96%87.mp4",
+      "action_id": null
+    }
+  ]
+}

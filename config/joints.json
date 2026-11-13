@@ -1,0 +1,442 @@
+{
+  "schema_version": 2,
+  "source": [
+    "User supplied ranges and clarification: seven expression servos plus one DOA-driven base, 2026-10-28",
+    "PY32F403平台舵机动作JSON格式.pdf",
+    "表情&动作/ServoActionList.json"
+  ],
+  "status": "documented_protocol_and_user_ranges; hardware and CAD rig binding unverified",
+  "angle_convention": "motion_angle_deg is semantic displacement from user-reported servo neutral; positive_motion defines sign. It is not a final 3D coordinate-system rotation.",
+  "position_mapping": {
+    "method": "documented_position_ticks",
+    "expression_axis_formula": "neutral_raw + (dir == 1 ? 1 : -1) * pos_deg * 182",
+    "ticks_per_degree": 182,
+    "speed_formula": "speed_deg_s * 65536 / 360",
+    "status": "documented, not verified against deployed firmware",
+    "out_of_range": "reject",
+    "notes": [
+      "Supplied raw endpoints are retained as independent limits. They differ slightly from rounded 182-tick-per-degree conversions.",
+      "Use separate semantic sign per joint; no shortest-path wrap at 180 degrees.",
+      "Base uses its own native position/speed encoding and is excluded from this formula.",
+      "A simulated pose/completion is not hardware position feedback."
+    ]
+  },
+  "arm_abduction_source": "The common user-supplied abduction range is applied to both independent arm servos.",
+  "joints": [
+    {
+      "id": "head_pitch",
+      "label": "头部俯仰",
+      "positive_motion": "抬头",
+      "neutral_raw": 32768,
+      "raw_limits": [
+        27307,
+        34953
+      ],
+      "motion_limits_deg": [
+        -12,
+        30
+      ],
+      "anchors": [
+        {
+          "raw_position": 27307,
+          "servo_angle_deg": 150,
+          "motion_angle_deg": 30,
+          "meaning": "抬头30°"
+        },
+        {
+          "raw_position": 32768,
+          "servo_angle_deg": 180,
+          "motion_angle_deg": 0,
+          "meaning": "中位"
+        },
+        {
+          "raw_position": 34953,
+          "servo_angle_deg": 192,
+          "motion_angle_deg": -12,
+          "meaning": "低头12°"
+        }
+      ],
+      "rig_origin_mm": null,
+      "rig_axis": null,
+      "rig_parent": null,
+      "velocity_limit_deg_s": null,
+      "neutral_pose_verified": false,
+      "protocol_axis_id": 0,
+      "bus": "UART1",
+      "dir_semantics": {
+        "1": "低头",
+        "0": "抬头"
+      },
+      "semantic_sign_for_dir_1": -1,
+      "documented_default_speed_deg_s": 60,
+      "control_owner": "expression_action",
+      "physical_bus_address": null
+    },
+    {
+      "id": "head_roll",
+      "label": "头部侧倾",
+      "positive_motion": "右偏头",
+      "neutral_raw": 32768,
+      "raw_limits": [
+        30948,
+        34588
+      ],
+      "motion_limits_deg": [
+        -10,
+        10
+      ],
+      "anchors": [
+        {
+          "raw_position": 30948,
+          "servo_angle_deg": 170,
+          "motion_angle_deg": -10,
+          "meaning": "左偏头10°"
+        },
+        {
+          "raw_position": 32768,
+          "servo_angle_deg": 180,
+          "motion_angle_deg": 0,
+          "meaning": "中位"
+        },
+        {
+          "raw_position": 34588,
+          "servo_angle_deg": 190,
+          "motion_angle_deg": 10,
+          "meaning": "右偏头10°"
+        }
+      ],
+      "rig_origin_mm": null,
+      "rig_axis": null,
+      "rig_parent": null,
+      "velocity_limit_deg_s": null,
+      "neutral_pose_verified": false,
+      "protocol_axis_id": 1,
+      "bus": "UART1",
+      "dir_semantics": {
+        "1": "右偏头",
+        "0": "左偏头"
+      },
+      "semantic_sign_for_dir_1": 1,
+      "documented_default_speed_deg_s": 60,
+      "control_owner": "expression_action",
+      "physical_bus_address": null
+    },
+    {
+      "id": "head_yaw",
+      "label": "头部水平转动",
+      "positive_motion": "左转",
+      "neutral_raw": 32768,
+      "raw_limits": [
+        21845,
+        43691
+      ],
+      "motion_limits_deg": [
+        -60,
+        60
+      ],
+      "anchors": [
+        {
+          "raw_position": 21845,
+          "servo_angle_deg": 120,
+          "motion_angle_deg": -60,
+          "meaning": "右转60°"
+        },
+        {
+          "raw_position": 32768,
+          "servo_angle_deg": 180,
+          "motion_angle_deg": 0,
+          "meaning": "中位"
+        },
+        {
+          "raw_position": 43691,
+          "servo_angle_deg": 240,
+          "motion_angle_deg": 60,
+          "meaning": "左转60°"
+        }
+      ],
+      "rig_origin_mm": null,
+      "rig_axis": null,
+      "rig_parent": null,
+      "velocity_limit_deg_s": null,
+      "neutral_pose_verified": false,
+      "protocol_axis_id": 2,
+      "bus": "UART2",
+      "dir_semantics": {
+        "1": "左转",
+        "0": "右转"
+      },
+      "semantic_sign_for_dir_1": 1,
+      "documented_default_speed_deg_s": 60,
+      "control_owner": "expression_action",
+      "physical_bus_address": null
+    },
+    {
+      "id": "right_arm_abduction",
+      "label": "右手臂外张内收",
+      "positive_motion": "外张",
+      "neutral_raw": 16384,
+      "raw_limits": [
+        15292,
+        22756
+      ],
+      "motion_limits_deg": [
+        -6,
+        35
+      ],
+      "anchors": [
+        {
+          "raw_position": 15292,
+          "servo_angle_deg": 84,
+          "motion_angle_deg": -6,
+          "meaning": "内收6°"
+        },
+        {
+          "raw_position": 16384,
+          "servo_angle_deg": 90,
+          "motion_angle_deg": 0,
+          "meaning": "中位"
+        },
+        {
+          "raw_position": 22756,
+          "servo_angle_deg": 125,
+          "motion_angle_deg": 35,
+          "meaning": "外张35°"
+        }
+      ],
+      "rig_origin_mm": null,
+      "rig_axis": null,
+      "rig_parent": null,
+      "velocity_limit_deg_s": null,
+      "neutral_pose_verified": false,
+      "protocol_axis_id": 4,
+      "bus": "UART4",
+      "dir_semantics": {
+        "1": "外张",
+        "0": "内收"
+      },
+      "semantic_sign_for_dir_1": 1,
+      "documented_default_speed_deg_s": 90,
+      "control_owner": "expression_action",
+      "physical_bus_address": null
+    },
+    {
+      "id": "right_arm_rotation",
+      "label": "右手臂旋转",
+      "positive_motion": "向前转",
+      "neutral_raw": 29127,
+      "raw_limits": [
+        25486,
+        61895
+      ],
+      "motion_limits_deg": [
+        -20,
+        180
+      ],
+      "anchors": [
+        {
+          "raw_position": 25486,
+          "servo_angle_deg": 140,
+          "motion_angle_deg": -20,
+          "meaning": "向后转20°"
+        },
+        {
+          "raw_position": 29127,
+          "servo_angle_deg": 160,
+          "motion_angle_deg": 0,
+          "meaning": "中位"
+        },
+        {
+          "raw_position": 61895,
+          "servo_angle_deg": 340,
+          "motion_angle_deg": 180,
+          "meaning": "向前转180°"
+        }
+      ],
+      "rig_origin_mm": null,
+      "rig_axis": null,
+      "rig_parent": null,
+      "velocity_limit_deg_s": null,
+      "neutral_pose_verified": false,
+      "protocol_axis_id": 5,
+      "bus": "UART4",
+      "dir_semantics": {
+        "1": "向前转",
+        "0": "向后转"
+      },
+      "semantic_sign_for_dir_1": 1,
+      "documented_default_speed_deg_s": 120,
+      "control_owner": "expression_action",
+      "physical_bus_address": null
+    },
+    {
+      "id": "left_arm_abduction",
+      "label": "左手臂外张内收",
+      "positive_motion": "外张",
+      "neutral_raw": 16384,
+      "raw_limits": [
+        15292,
+        22756
+      ],
+      "motion_limits_deg": [
+        -6,
+        35
+      ],
+      "anchors": [
+        {
+          "raw_position": 15292,
+          "servo_angle_deg": 84,
+          "motion_angle_deg": -6,
+          "meaning": "内收6°"
+        },
+        {
+          "raw_position": 16384,
+          "servo_angle_deg": 90,
+          "motion_angle_deg": 0,
+          "meaning": "中位"
+        },
+        {
+          "raw_position": 22756,
+          "servo_angle_deg": 125,
+          "motion_angle_deg": 35,
+          "meaning": "外张35°"
+        }
+      ],
+      "rig_origin_mm": null,
+      "rig_axis": null,
+      "rig_parent": null,
+      "velocity_limit_deg_s": null,
+      "neutral_pose_verified": false,
+      "protocol_axis_id": 6,
+      "bus": "UART5",
+      "dir_semantics": {
+        "1": "外张",
+        "0": "内收"
+      },
+      "semantic_sign_for_dir_1": 1,
+      "documented_default_speed_deg_s": 90,
+      "control_owner": "expression_action",
+      "physical_bus_address": null
+    },
+    {
+      "id": "left_arm_rotation",
+      "label": "左手臂旋转",
+      "positive_motion": "向前转",
+      "neutral_raw": 36409,
+      "raw_limits": [
+        3641,
+        40050
+      ],
+      "motion_limits_deg": [
+        -20,
+        180
+      ],
+      "anchors": [
+        {
+          "raw_position": 3641,
+          "servo_angle_deg": 20,
+          "motion_angle_deg": 180,
+          "meaning": "向前转180°"
+        },
+        {
+          "raw_position": 36409,
+          "servo_angle_deg": 200,
+          "motion_angle_deg": 0,
+          "meaning": "中位"
+        },
+        {
+          "raw_position": 40050,
+          "servo_angle_deg": 220,
+          "motion_angle_deg": -20,
+          "meaning": "向后转20°"
+        }
+      ],
+      "rig_origin_mm": null,
+      "rig_axis": null,
+      "rig_parent": null,
+      "velocity_limit_deg_s": null,
+      "neutral_pose_verified": false,
+      "protocol_axis_id": 7,
+      "bus": "UART5",
+      "dir_semantics": {
+        "1": "向后转",
+        "0": "向前转"
+      },
+      "semantic_sign_for_dir_1": -1,
+      "documented_default_speed_deg_s": 120,
+      "control_owner": "expression_action",
+      "physical_bus_address": null
+    }
+  ],
+  "pending": [
+    "CAD joint origins/axes/hierarchy and neutral-pose alignment",
+    "Base rotation zero, orientation sign, native speed conversion and wrap policy",
+    "Deployed firmware left-arm direction implementation and actual bus addresses",
+    "Motion feedback/interrupt/recovery interface",
+    "DOA sensor coordinate frame and world heading conversion",
+    "Effective screen display area and native panel resolution",
+    "Expression/action runtime synchronization policy needs product and real-hardware confirmation"
+  ],
+  "expression_servo_count": 7,
+  "total_control_axes": 8,
+  "base_axis": {
+    "id": "base_yaw",
+    "protocol_axis_id": 3,
+    "control_owner": "DOA",
+    "bus": "UART2_gateway",
+    "angle_validation_range_deg": [
+      0,
+      360
+    ],
+    "dir_semantics": {
+      "0": "正转",
+      "1": "反转"
+    },
+    "position_speed_encoding": "base_native_control_word",
+    "documented_default_native_speed": 190,
+    "expression_action_enabled": false,
+    "continuous_multi_turn_verified": false,
+    "doa_reference_frame": null,
+    "zero_heading_alignment_deg": null,
+    "rig_origin_mm": null,
+    "rig_axis": null,
+    "rotating_part_group": null,
+    "physical_bus_address": null
+  },
+  "action_protocol": {
+    "fixed_axis_array": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "expression_allowed_axes": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "base_entry_policy": "Preserve id=3 in every stage; en=0 for expression actions. DOA owns base commands.",
+    "en_zero": "Keep previous target/pose; ignore dir,pos,speed. Do not reset to neutral.",
+    "pos_semantics": "Absolute offset from servo neutral, expressed as nonnegative magnitude plus dir; not an incremental angle.",
+    "hold_ms_semantics": "Wait after all enabled axes are estimated to finish moving.",
+    "duration_estimation": "max(abs(target_signed_angle-current_signed_angle)/speed for enabled expression axes) + hold_ms/1000",
+    "hardware_arrival_verified": false
+  },
+  "known_document_issues": [
+    "PDF notes legacy LEFT_PITCH_OUTWARD/INWARD macros still have reversed signs; deployed firmware version needs verification.",
+    "PDF calm sample asks for arm inward 10 degrees, exceeding the same document limit of 6 degrees; inspect actual action JSON separately.",
+    "Raw endpoint values and approximate position factor 182 are not numerically identical; use the documented command formula and explicit limits separately."
+  ],
+  "runtime_angle_convention": {
+    "reference": "新版展示.html，机器人自身左右",
+    "keys": "head_pitch_down, head_roll, head_yaw, arm_l_forward/out, arm_r_forward/out",
+    "note": "Runtime pitch is down-positive and roll is left-positive, opposite the head_pitch/head_roll legacy motion_angle_deg signs in this range registry. rig.json and lib/motion.js own the preview mapping."
+  }
+}

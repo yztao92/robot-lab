@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Robot Lab · 实板联调监控台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%234a6fa5'/%3E%3Cpath d='M12 15v10m16-10v10' stroke='%23fff' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css?v=32">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="Robot Lab 首页">
+      <span class="brand-icon"><i></i><i></i></span>
+      <span>Robot <b>Lab</b></span>
+    </a>
+    <div class="board-bar" aria-label="实板状态">
+      <div class="board-switch">
+        <button type="button" id="board-host-chip" class="status-chip board-chip" aria-haspopup="true" aria-expanded="false" aria-controls="board-menu" title="切换主板">
+          <span class="chip-label">主板 <span class="caret" aria-hidden="true">▾</span></span><strong id="board-host">检测中</strong>
+        </button>
+        <div id="board-menu" class="board-menu" role="dialog" aria-label="选择主板" hidden>
+          <div class="board-menu-head"><span>局域网内的机器人</span><button type="button" id="board-rescan" class="text-button">重新扫描</button></div>
+          <div id="board-list" class="board-list"><p class="empty">扫描中…</p></div>
+          <form id="board-add" class="board-add">
+            <input id="board-add-input" type="text" placeholder="手动输入 IP，例如 192.168.0.8" autocomplete="off" spellcheck="false" aria-label="主板 IP">
+            <button type="submit" class="outline sm">连接</button>
+          </form>
+          <p id="board-menu-error" class="menu-error" hidden></p>
+        </div>
+      </div>
+      <div class="status-chip"><span class="chip-label">对话</span><strong id="board-turn-phase">-</strong></div>
+      <div class="status-chip"><span class="chip-label">系统</span><strong id="board-system">-</strong></div>
+      <div class="status-chip"><span class="chip-label">视觉</span><strong id="board-people">-</strong></div>
+      <div class="status-chip"><span class="chip-label">本地桥接</span><strong id="connection" class="connection"><i></i>连接中</strong></div>
+    </div>
+    <div class="board-actions">
+      <label class="level-control" title="喇叭音量：100% 为正常音量（已在 −7 dB 防欠压上限之下），只能往小调；50% ≈ −20 dB，0% 静音">
+        <span>音量</span><input id="board-volume" type="range" min="0" max="100" step="1" value="100" aria-label="喇叭音量" disabled><output id="board-volume-value" for="board-volume">-</output>
+      </label>
+      <label class="level-control" title="屏幕亮度（最低 5%，避免黑屏）">
+        <span>亮度</span><input id="board-brightness" type="range" min="5" max="100" step="1" value="80" aria-label="屏幕亮度" disabled><output id="board-brightness-value" for="board-brightness">-</output>
+      </label>
+      <label class="level-control" title="风扇转速，手动控制（写 pwm-fan 的 pwm1；此风扇低电平有效，pwm1 255 为停转、0 为全速，滑块已换算）。风扇不受内核温控管理，设置会一直保持到板子重启；CPU 过热降频不受影响">
+        <span>风扇</span><input id="board-fan" type="range" min="0" max="100" step="1" value="50" aria-label="风扇转速" disabled><output id="board-fan-value" for="board-fan">-</output>
+      </label>
+      <button id="board-toggle-btn" class="primary sm" title="启停板端 voiced 服务">启动语音</button>
+    </div>
+  </header>
+
+  <dialog id="board-auth" class="auth-dialog" aria-labelledby="board-auth-title">
+    <form id="board-auth-form">
+      <h2 id="board-auth-title">需要密码</h2>
+      <p>本机密钥无法登录 <code id="board-auth-target">root@</code>，请输入 root 密码。</p>
+      <input id="board-auth-password" type="password" autocomplete="current-password" aria-label="root 密码" required>
+      <p id="board-auth-error" class="auth-error" role="alert" hidden></p>
+      <p class="auth-note">密码只保存在本机 Lab 服务的内存里，不写入磁盘；服务重启后需重新输入。</p>
+      <div class="auth-actions">
+        <button type="button" id="board-auth-cancel" class="outline sm">取消</button>
+        <button type="submit" id="board-auth-submit" class="primary sm">连接</button>
+      </div>
+    </form>
+  </dialog>
+
+  <section id="camera-window" class="camera-window" aria-label="板端摄像头实时画面" hidden>
+    <div id="camera-titlebar" class="camera-titlebar">
+      <h2>摄像头 · 实时画面</h2>
+      <span id="camera-status" class="camera-status">-</span>
+      <button type="button" id="camera-points" class="text-button" title="在画面上显示 visiond 检测到的人脸框和 98 个关键点。框变橙色表示在说话">点位 开</button>
+      <button type="button" id="camera-rotate" class="text-button" title="顺时针旋转画面 90°，只改这里的显示，下次打开还是这个角度">旋转 0°</button>
+      <button type="button" id="camera-close" class="text-button" aria-label="关闭摄像头画面">关闭</button>
+    </div>
+    <div class="camera-body">
+      <canvas id="camera-canvas" width="640" height="360" aria-label="摄像头画面"></canvas>
+      <p id="camera-empty" class="camera-empty">等待画面…</p>
+    </div>
+    <div class="camera-foot">
+      <span>读 ISP 的另一路输出（/dev/video12），visiond 继续运行</span>
+      <button type="button" id="camera-retry" class="outline sm" hidden>重新打开</button>
+    </div>
+  </section>
+
+  <main>
+    <div id="error" class="error" role="alert" hidden></div>
+    <div id="startup-recovery" class="error" hidden>
+      <p>若本地服务已停止，请双击 项目文件夹中的「启动模拟器.command」。服务启动后重新加载预览。</p>
+      <button id="reload-preview" class="outline">重新加载</button>
+    </div>
+
+    <div class="workspace">
+      <!-- 左：三维舞台，数据浮在两角；右：字幕与日志 -->
+      <section class="stage-card panel-card" aria-label="机器人实时状态与三维预览">
+        <div class="stage-body">
+        <div id="viewport"><div id="loading"><span class="spinner"></span>载入 STP 模型</div></div>
+        <div class="stage-tools">
+          <button id="camera-toggle" class="icon-button" title="摄像头：打开板端实时画面。读 ISP 的另一路输出（/dev/video12），visiond 继续运行" aria-label="摄像头">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m16 10.5 5-3v9l-5-3"/></svg>
+          </button>
+          <button id="reset-all" class="icon-button" title="复位姿态：只复位虚拟机器人和视角，不向板端下发任何舵机指令" aria-label="复位姿态">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4.5V9h4.5"/></svg>
+          </button>
+        </div>
+        <div class="stage-overlay service-overlay">
+          <span class="state-label">服务 CPU</span>
+          <div id="board-services" aria-label="各服务状态和 CPU 占比">-</div>
+        </div>
+        <div class="face-monitor">
+          <div class="mini-label">屏幕表情 <span id="face-mode">循环</span></div>
+          <video id="face-video" muted playsinline preload="auto" aria-label="机器人屏幕表情"></video>
+          <p id="face-name">D01 · 默认待机</p>
+          <button id="face-resume" hidden>点击播放表情</button>
+        </div>
+        <div class="stage-overlay stage-footer">
+          <div class="state-mapping-grid">
+            <div class="state-box">
+              <span class="state-label">情绪</span>
+              <strong id="live-emotion">待机 (default)</strong>
+              <small id="live-queue" class="state-sub quiet">队列空</small>
+            </div>
+            <div class="state-box">
+              <span class="state-label">动作</span>
+              <div class="state-inline">
+                <span id="phase-dot" class="phase-dot"></span>
+                <strong id="playback-title">准备就绪</strong>
+                <span id="elapsed" class="elapsed-tag quiet">0.0 s</span>
+              </div>
+              <small id="playback-detail" class="state-sub quiet">等待板端触发动作</small>
+            </div>
+            <div class="state-box">
+              <span class="state-label">DOA</span>
+              <strong id="base-angle">0°</strong>
+              <small id="base-target" class="state-sub quiet">目标 0° (正前)</small>
+            </div>
+          </div>
+          <div id="stage-track" class="stage-track" aria-label="动作阶段"></div>
+          <div class="joints-row">
+            <span class="state-label">七轴姿态</span>
+            <div id="live-joints-grid" class="live-joints-grid" aria-label="七轴实时姿态"></div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <aside class="side-panels">
+        <section id="captions-card" class="console-card panel-card">
+          <div class="console-head">
+            <button type="button" class="collapse-toggle" data-collapse="captions-card" aria-expanded="true" aria-controls="captions-body">
+              <span class="chev" aria-hidden="true"></span><h2>实时字幕</h2><span id="captions-card-unread" class="unread" hidden></span>
+            </button>
+            <button id="clear-captions" class="text-button head-extra">清空</button>
+          </div>
+          <div id="captions-body" class="console-body">
+            <div id="caption-list" class="caption-list" aria-live="polite">
+              <p class="empty">对着板子说话，识别结果和回复会实时显示在这里…</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="log-card" class="console-card log-card panel-card">
+          <div class="console-head">
+            <button type="button" class="collapse-toggle" data-collapse="log-card" aria-expanded="true" aria-controls="log-body">
+              <span class="chev" aria-hidden="true"></span><h2>运行日志</h2><span id="log-card-unread" class="unread" hidden></span>
+            </button>
+            <div class="log-controls head-extra">
+              <div class="filter-pills">
+                <button type="button" data-logfilter="all" class="active">全部</button>
+                <button type="button" data-logfilter="board">板端</button>
+                <button type="button" data-logfilter="simulator">回执</button>
+              </div>
+              <button id="export-events" class="text-button" title="导出 JSONL">导出</button>
+              <button id="clear-events" class="text-button">清空</button>
+            </div>
+          </div>
+          <div id="log-body" class="console-body">
+            <div class="last-signal">最近信号 <span id="last-source">等待板端信号</span></div>
+            <div id="event-list" class="event-list" aria-live="polite"><p class="empty">等待事件</p></div>
+          </div>
+        </section>
+
+        <section id="perf-card" class="console-card perf-card panel-card">
+          <div class="console-head">
+            <button type="button" class="collapse-toggle" data-collapse="perf-card" aria-expanded="true" aria-controls="perf-body">
+              <span class="chev" aria-hidden="true"></span><h2>性能</h2><span id="perf-card-unread" class="unread" hidden></span>
+            </button>
+            <button id="clear-perf" class="text-button head-extra">清空</button>
+          </div>
+          <div id="perf-body" class="console-body">
+            <div id="perf-summary" class="perf-summary"></div>
+            <div class="perf-table-wrap">
+              <table class="perf-table">
+                <thead><tr><th>时间</th><th title="voiced 日志 e2e_ms：估计用户尾音到首个播放块预计播放的耗时，包含 ALSA 队列时间">首词</th><th title="voiced 日志 ms：收到用户结束事件到收到回复首个音频包">服务端</th><th title="第二层意图处理耗时">意图</th><th title="板端收到云端说话开始通知 → 发布用于转向的 DOA 方向；包含说话时长，不含电脑传输及电机运动；缺开始事件时显示 —">DOA</th></tr></thead>
+                <tbody id="perf-rows"><tr><td colspan="5" class="empty">等待对话…</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <!-- 底部默认折叠的离线手动调试抽屉（不占主屏，仅离线排查时展开） -->
+    <details class="debug-drawer">
+      <summary>离线手动调试工具箱（无实板时手动点按动作 / 关节滑块 / JSON 注入）</summary>
+      <div class="debug-drawer-body">
+        <div class="transport">
+          <button id="play" class="primary"><span>▶</span> 播放动作</button>
+          <button id="pause" class="outline" disabled>暂停</button>
+          <button id="stop" class="text-button">停止</button>
+          <button id="neutral" class="text-button">七轴归中</button>
+          <div class="doa-inline">
+            <label for="doa">DOA 底座</label>
+            <input id="doa" aria-label="DOA 底座目标角度" type="range" min="0" max="359" step="1" value="0">
+          </div>
+          <div class="speed"><label for="speed">预览速度</label><select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></div>
+        </div>
+        <div class="control-card">
+          <nav class="tabs" aria-label="控制面板"><button data-tab="library" class="active">动作表情</button><button data-tab="joints">关节调试</button><button data-tab="signals">信号接入</button></nav>
+          <section id="panel-library" class="panel">
+            <div class="library-head"><div class="segmented"><button data-kind="actions" class="active">动作 <span>21</span></button><button data-kind="expressions">表情 <span>23</span></button><button data-kind="states">状态 <span>16</span></button></div><input type="search" id="search" aria-label="搜索动作或表情" placeholder="搜索名称或编号…"></div>
+            <div id="library-list" class="library-list" aria-label="动作与表情列表"></div>
+            <div class="selection"><div class="selection-top"><span id="selection-id">A02</span><h2 id="selection-name">喜悦</h2></div><p id="selection-description"></p><div id="face-buttons" hidden><button id="face-full" class="primary">完整播放</button><button id="face-loop" class="outline">循环保持</button></div><div id="action-note" class="small-note">按协议速度逐轴运动，全部模拟到位后再停留。</div></div>
+          </section>
+          <section id="panel-joints" class="panel" hidden><div class="panel-intro"><h2>七个表达关节</h2><p>角度相对中位，左右按机器人自身。调节会中断当前动作。</p></div><div id="joint-controls"></div></section>
+          <section id="panel-signals" class="panel" hidden><div class="endpoint"><span>POST</span><code>/api/events</code></div><label class="field-label" for="event-example">事件示例</label><select id="event-example"><option value="action">播放动作</option><option value="doa">DOA 朝向</option><option value="state">业务状态</option><option value="expression">屏幕表情</option><option value="stop">停止</option></select><label class="field-label" for="event-json">事件 JSON</label><textarea id="event-json" rows="5" spellcheck="false"></textarea><button id="send-event" class="primary wide">注入本地事件</button><p id="event-result" role="status" class="small-note"></p></section>
+        </div>
+      </div>
+    </details>
+  </main>
+  <script type="module" src="/app.js?v=38"></script>
+  <script type="module" src="/lib/camera-window.js?v=9"></script>
+</body>
+</html>

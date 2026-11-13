@@ -1,0 +1,7 @@
+{
+  "name": "robot-hardware-simulator",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node --test tests/*.test.mjs"},
+  "description": "Local STP robot preview and event receiver; no hardware actuator output"
+}

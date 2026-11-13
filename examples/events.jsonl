@@ -1,0 +1,9 @@
+{"type":"expression","source":"replay","expression_id":"D02","mode":"full"}
+{"type":"doa","source":"replay","angle_deg":45,"frame":"world"}
+{"type":"action","source":"replay","action_id":"A02"}
+{"type":"state","source":"replay","state_id":"T01"}
+{"type":"state","source":"replay","state_id":"T02"}
+{"type":"state","source":"replay","state_id":"T03"}
+{"type":"state","source":"replay","state_id":"T04"}
+{"type":"stop","source":"replay"}
+{"type":"reset","source":"replay"}

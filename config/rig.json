@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "status": "preview_hypothesis_not_mechanically_calibrated",
+  "source": "STP&CMF/00-id-movi_20260731.stp",
+  "units": "mm",
+  "coordinate_system": {
+    "up": "+Y",
+    "forward": "-Z",
+    "robot_left": "-X",
+    "robot_right": "+X"
+  },
+  "base": {
+    "origin": [0, -111.65, 44.9],
+    "axis": [0, 1, 0],
+    "positive": "robot_left",
+    "fixed_meshes": [0, 1, 2, 4, 5],
+    "rotating_meshes": [3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
+    "verified": false
+  },
+  "head": {
+    "origin": [0, 13, 40],
+    "meshes": [6, 7, 14, 15, 18, 19, 20, 21],
+    "order": ["head_yaw", "head_pitch_down", "head_roll"],
+    "axes": {"head_yaw": [0, 1, 0], "head_pitch_down": [-1, 0, 0], "head_roll": [0, 0, 1]},
+    "verified": false
+  },
+  "left_arm": {
+    "origin": [-31.4, -17.14615036813, 38.600910006456],
+    "meshes": [22, 23, 24],
+    "order": ["arm_l_out", "arm_l_forward"],
+    "axes": {"arm_l_out": [0, 0, -1], "arm_l_forward": [1, 0, 0]},
+    "verified": false
+  },
+  "right_arm": {
+    "origin": [31.4, -17.14615036813, 38.600910006456],
+    "meshes": [11, 12, 13],
+    "order": ["arm_r_out", "arm_r_forward"],
+    "axes": {"arm_r_out": [0, 0, 1], "arm_r_forward": [1, 0, 0]},
+    "verified": false
+  },
+  "screen": {
+    "mesh": 14,
+    "front_z": -3.04,
+    "overlay_offset_mm": 0.025,
+    "fit": "contain",
+    "effective_display_area_verified": false
+  },
+  "materials": {
+    "blue": {"color": "#6f91c5", "roughness": 0.43, "metalness": 0.02},
+    "white": {"color": "#f0f1ed", "roughness": 0.48, "metalness": 0.01},
+    "silver": {"color": "#cdd1d6", "roughness": 0.22, "metalness": 0.85},
+    "black": {"color": "#080a0d", "roughness": 0.27, "metalness": 0.08},
+    "blue_meshes": [1, 2, 5, 6, 10, 12, 22],
+    "silver_meshes": [3],
+    "black_meshes": [14, 15],
+    "note": "Screen RGB previews of CMF blue Pantone 7682C, white approximately RAL 9003 and silver PVD. Not a calibrated color/material sample. Ring is a single CAD mesh: its blue cover and silver frame are not independently assigned."
+  },
+  "notes": [
+    "All 27 converted STP meshes are retained at original positions in the neutral pose.",
+    "Shoulder origins use sphere bounding-box centers. Head origin is estimated at the neck connection; nested axis order is a preview hypothesis.",
+    "DOA preview rotates the upper assembly including its slanted ring. Real rotating part ownership, zero heading and direction require mechanical/firmware confirmation.",
+    "Seven action axes are independent of base DOA. No actual servo feedback or collision physics are implied.",
+    "Face video is contained within the actual front-cover mesh without changing its aspect ratio. Effective screen dimensions remain unconfirmed."
+  ]
+}

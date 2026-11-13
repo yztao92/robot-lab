@@ -1,0 +1,1181 @@
+{
+  "total_actions": 21,
+  "ServoActionList": [
+    {
+      "action_id": 0,
+      "action": "calm",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 650,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 2, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 4, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 1,
+      "action": "joy",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1150,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 8, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 25, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 65, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 25, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 65, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 2,
+      "action": "fascinated",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1000,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 10, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 0, "pos": 3, "speed": 60 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 12, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 35, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 12, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 35, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 3,
+      "action": "deep_thought",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1100,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 3, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 0, "pos": 7, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 12, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 17, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 58, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 4,
+      "action": "sad",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 900,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 8, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 4, "speed": 60 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 1, "dir": 0, "pos": 8, "speed": 120 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 8, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 5,
+      "action": "grief",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1000,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 11, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 6, "speed": 60 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 1, "dir": 0, "pos": 6, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 18, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 65, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 6,
+      "action": "accept",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 450,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 8, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 7,
+      "action": "trust",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 850,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 4, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 26, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 20, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 26, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 20, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 8,
+      "action": "admire",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1150,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 15, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 28, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 78, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 28, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 78, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 9,
+      "action": "boring",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 900,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 7, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 0, "pos": 8, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 0, "pos": 20, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 10,
+      "action": "disgust",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1250,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 3, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 28, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 32, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 58, "speed": 120 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 11,
+      "action": "dislike",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1150,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 5, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 4, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 0, "pos": 25, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 30, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 25, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 12,
+      "action": "nervous",
+      "stages": [
+        {
+          "total_stages": 4,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 2,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 4, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 8, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 9, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 38, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 9, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 38, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 3,
+          "hold_ms": 450,
+          "servos": [
+            { "id": 0, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 4,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 13,
+      "action": "fear",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1300,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 9, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 4, "speed": 60 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 17, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 72, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 17, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 72, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 14,
+      "action": "panic",
+      "stages": [
+        {
+          "total_stages": 4,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 2,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 12, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 17, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 30, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 88, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 30, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 88, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 0, "pos": 17, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 4,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 15,
+      "action": "worry",
+      "stages": [
+        {
+          "total_stages": 4,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 2,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 5, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 0, "pos": 12, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 20, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 45, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 12, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 4,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 16,
+      "action": "angry",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1500,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 6, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 25, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 45, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 25, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 45, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 17,
+      "action": "irritable",
+      "stages": [
+        {
+          "total_stages": 6,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 6,
+          "current_stage": 2,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 4, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 0, "pos": 8, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 25, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 45, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 25, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 70, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 6,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 8, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 70, "speed": 120 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 45, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 6,
+          "current_stage": 4,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 45, "speed": 120 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 70, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 6,
+          "current_stage": 5,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 65, "speed": 120 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 50, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 6,
+          "current_stage": 6,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 18,
+      "action": "interested",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1100,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 4, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 0, "pos": 7, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 18, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 16, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 30, "speed": 120 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 19,
+      "action": "expection",
+      "stages": [
+        {
+          "total_stages": 3,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 2,
+          "hold_ms": 1050,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 9, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 24, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 48, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 24, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 48, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 3,
+          "current_stage": 3,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": 20,
+      "action": "vigiland",
+      "stages": [
+        {
+          "total_stages": 4,
+          "current_stage": 1,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 2,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 0, "pos": 3, "speed": 60 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 30, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 12, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 10, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 12, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 0, "pos": 10, "speed": 120 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 3,
+          "hold_ms": 450,
+          "servos": [
+            { "id": 0, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 1, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 2, "en": 1, "dir": 0, "pos": 25, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 5, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 6, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 7, "en": 0, "dir": 0, "pos": 0, "speed": 0 }
+          ]
+        },
+        {
+          "total_stages": 4,
+          "current_stage": 4,
+          "hold_ms": 0,
+          "servos": [
+            { "id": 0, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 1, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 2, "en": 1, "dir": 1, "pos": 0, "speed": 60 },
+            { "id": 3, "en": 0, "dir": 0, "pos": 0, "speed": 0 },
+            { "id": 4, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 5, "en": 1, "dir": 1, "pos": 0, "speed": 120 },
+            { "id": 6, "en": 1, "dir": 1, "pos": 0, "speed": 90 },
+            { "id": 7, "en": 1, "dir": 1, "pos": 0, "speed": 120 }
+          ]
+        }
+      ]
+    }
+  ]
+}
