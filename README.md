@@ -5,14 +5,14 @@
 ## 同事首次使用（macOS）
 
 1. 安装 Git 和 Python 3.10+，浏览器需要支持 WebGL。可从 https://www.python.org/downloads/macos/ 安装 Python；终端执行 `git --version` 确认 Git 可用。无需安装 Node、npm 或 Python 第三方包。
-2. 获得私有仓库访问权限后，只需克隆一次：
+2. 仓库已公开，无需申请权限，只需克隆一次：
 
    ```sh
    git clone https://github.com/yztao92/robot-lab.git
    cd robot-lab
    ```
 
-   也可使用已配置 SSH 的地址 `git@github.com:yztao92/robot-lab.git`。HTTPS 认证使用 Git 凭据管理器或 GitHub CLI，不使用 GitHub 账户密码。
+   也可使用已配置 SSH 的地址 `git@github.com:yztao92/robot-lab.git`。使用 HTTPS 克隆和拉取公开仓库无需 GitHub 登录；推送修改仍需写入权限。
 3. 在 Finder 中双击 **启动模拟器.command**，会检查 Python 和运行资源、启动后台服务，并打开浏览器。纯动作、表情预览不需要连接主板或访问互联网。
 4. 需要实板数据时，让电脑可以通过网络访问主板，在页面选择或输入 IP，并使用自己的 SSH 凭据。平台不会为新主板安装 Robot 固件，板端需已有兼容服务。
 
@@ -27,7 +27,7 @@
 - 主板选择保存在 `~/.config/robot-lab/boards.json`；日志保存在 `~/Library/Logs/RobotLab/`，均在仓库外，不随 pull 覆盖。不要把个人凭据放入仓库。
 - 同一台 Mac 同时使用一个后台实例；搬动目录或换另一份克隆前，先从原目录停止。不要在外置盘或临时目录中运行需要登录自启的实例。
 
-维护者发布更新：在仓库内完成修改和检查后 `git add`、`git commit`、`git push`。同事在获得仓库权限后双击更新即可。下载 ZIP 可启动，但不支持 Git 更新，建议使用 clone。
+维护者发布更新：在仓库内完成修改和检查后 `git add`、`git commit`、`git push`。同事双击更新即可，无需申请仓库读取权限。下载 ZIP 可启动，但不支持 Git 更新，建议使用 clone。
 
 ## 启动
 
